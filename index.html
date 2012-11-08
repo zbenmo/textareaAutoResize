@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Experiment with textarea auto resize</title>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+  <script type='text/javascript' src='textareaAutoResize.js'></script>
+  <style type='text/css'>
+    textarea {
+      resize: none;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h2>Experiment with textarea auto resize</h2>
+  <textarea placeholder='Type something to experiment with auto resizing' style='height: 30px;' rows='2' cols='40'></textarea>
+  <script>
+	  $(document).ready(function() {
+	  	$('textarea').textAreaAutoResize();
+	  });
+  </script>
+</body>
+</html>
