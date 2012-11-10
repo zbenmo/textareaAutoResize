@@ -13,10 +13,14 @@
 </head>
 <body>
   <h2>Experiment with textarea auto resize</h2>
-  <textarea placeholder='Type something to experiment with auto resizing' style='height: 30px;' rows='2' cols='40'></textarea>
+  <textarea placeholder='Type something to experiment with auto resizing (but wait first to see effect with value changing)' style='height: 30px;' rows='2' cols='40'></textarea>
   <script>
     $(document).ready(function() {
     	$('textarea').textareaAutoResize();
+    	setTimeout(function() {
+    		$('textarea').val('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+    		$('textarea').change();
+    	},2500);
     });
   </script>
 </body>

@@ -11,10 +11,15 @@
 
    this.on('input', function() {
       var $this = $(this);
-      resize.bind($this)();
+      resize.call($this);
    });
 
-   resize.bind(this)();
+   this.on('change', function() {
+     var $this = $(this);
+     resize.call($this);
+   });
+   
+   resize.call(this);
   };
 
 })(jQuery);
